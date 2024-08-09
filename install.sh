@@ -1,8 +1,6 @@
 # dwm
-# https://forums.bunsenlabs.org/viewtopic.php?id=7571
-# https://www.reddit.com/r/suckless/comments/jj61py/how_do_i_make_dwm_appear_on_my_display_manager/
 sudo pacman -Syyu
-sudo pacman -S --noconfirm --needed base-devel git libx11 libxft xorg-server xorg-xinit terminus-font
+sudo pacman -S --noconfirm base-devel git libx11 libxft libxinerama xorg-server xorg-xinit terminus-font
 sudo mkdir -p ~/.local/src
 
 sudo cp -r st ~/.local/src/
@@ -39,3 +37,5 @@ Comment=Dynamic window manager
 Exec=dwm
 Icon=dwm
 Type=XSession" > /usr/share/xsessions/dwm.desktop'
+
+echo "exec dwm" >~/.xinitrc
